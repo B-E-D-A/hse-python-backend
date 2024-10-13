@@ -24,4 +24,4 @@ CMD ["bash", "-c", "while true; do sleep 1; done"]
 
 FROM base as local
 
-CMD ["uvicorn", "demo_service.api:app", "--port", "8080", "--host", "0.0.0.0"]
+CMD ["uvicorn", "hw_service.main:app", "--port", "8080", "--host", "0.0.0.0"]
