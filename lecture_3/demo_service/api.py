@@ -2,13 +2,13 @@ from http import HTTPStatus
 from typing import Annotated
 
 from fastapi import FastAPI, HTTPException, Query
-from prometheus_fastapi_instrumentator import Instrumentator
+# from prometheus_fastapi_instrumentator import Instrumentator
 
 from demo_service import store
 from demo_service.contracts import UserRequest, UserResource
 
 app = FastAPI(title="Demo User API")
-Instrumentator().instrument(app).expose(app)
+# Instrumentator().instrument(app).expose(app)
 
 
 @app.post(
