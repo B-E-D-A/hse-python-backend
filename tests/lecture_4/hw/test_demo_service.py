@@ -1,17 +1,13 @@
 import base64
-from unittest.mock import AsyncMock
 import pytest
 import pytest_asyncio
 from fastapi import FastAPI
 from httpx import AsyncClient
-from pydantic import BaseModel, SecretStr
 
-from fastapi.testclient import TestClient
-from lecture_4.demo_service.core.users import UserRole, password_is_longer_than_8
-from lecture_4.demo_service.api.utils import initialize, user_service
-from datetime import datetime
+from lecture_4.demo_service.core.users import UserRole
+from lecture_4.demo_service.api.utils import initialize
 from lecture_4.demo_service.api.main import create_app
-from lecture_4.demo_service.core.users import UserService, UserInfo, UserRole
+from lecture_4.demo_service.core.users import UserRole
 
 
 @pytest_asyncio.fixture
